@@ -1,0 +1,43 @@
+@media (max-width: 1000px) {
+    .tab-details {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        margin-top: 140px;
+    }
+
+    .tab-titles {
+        flex-direction: column;
+        align-items: end;
+        flex: 0 0 25%;
+    }
+
+    .tab-titles h2 {
+        display: flex;
+        border: 2px solid #00000033;
+        border-left: none;
+        width: 100%;
+        padding: 10px;
+        border-radius: 0 5px 5px 0;
+        margin-left: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 40px;
+        margin-bottom: 8px;
+    }
+
+    .tab-bodies {
+        align-items: start;
+        justify-content: start;
+        flex: 0 0 75%;
+    }
+
+    .tab-bodies div.active {
+        border: 1px solid #00000033;
+        border-right: none;
+        border-radius: 5px 0 5px 5px;
+        align-items: start;
+        flex-wrap: wrap;
+        text-align: justify;
+    }
+}
