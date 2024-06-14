@@ -1,4 +1,4 @@
-import ForecastItem from "@/components/ForecastItem";
+import ForecastItem from "@/components/Weather/ForecastItem";
 
 function ForecastList() {
     return (
