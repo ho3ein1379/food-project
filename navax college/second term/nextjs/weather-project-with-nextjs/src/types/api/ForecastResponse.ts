@@ -62,7 +62,7 @@ interface Rain {
     "1h": number
 }
 
-interface Daily {
+export interface Daily {
     dt: number
     sunrise: number
     sunset: number

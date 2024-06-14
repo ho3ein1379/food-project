@@ -20,7 +20,7 @@ function SearchForm({city, CallWeatherApi}: Props) {
     }
 
     return (
-        <form onSubmit={FormSubmitHandler}>
+        <form className="m-auto flex justify-center border-b-2 pb-6 mb-6" onSubmit={FormSubmitHandler}>
             <input className="border rounded py-2 px-4" name="cityName" type="text" placeholder="cityName" onChange={cityNameHandler} value={nameState}/>
             <input className="bg-primary py-2 px-4 ml-3 text-white rounded" name="search" type="submit" value="Submit"/>
         </form>

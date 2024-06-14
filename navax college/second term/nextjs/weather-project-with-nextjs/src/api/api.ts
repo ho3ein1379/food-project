@@ -1,28 +1,34 @@
-import {ForecastResponse} from "@/types/api/ForecastResponse";
-import {WeatherResponse} from "@/types/api/WeatherResponse";
+import type { ForecastResponse } from "@/types/api/ForecastResponse";
+import type { WeatherResponse } from "@/types/api/WeatherResponse";
 
 const token = "3dce9b1c66837262a25b3f448d354a76";
-const baseUrl = "https://api.openweathermap.org/data/2.5/"
+const baseUrl = "https://api.openweathermap.org/data/2.5/";
 
 interface WeatherProps {
-    city: string
+    city: string;
 }
 
 interface LatLonProps {
     lat: number;
-    lon: number
+    lon: number;
 }
 
-export async function WeatherApi({city}: WeatherProps): Promise<WeatherResponse> {
+export async function WeatherApi({ city }: WeatherProps): Promise<WeatherResponse> {
     const response = await fetch(baseUrl + `weather?q=${city}&appid=${token}&units=metric`);
+    if (!response.ok) {
+        throw new Error('Failed to fetch weather data');
+    }
     return await response.json();
 }
 
-export async function ForecastApi({lat, lon}: LatLonProps): Promise<ForecastResponse> {
-    const response = await fetch(baseUrl + `onecall?lat=${lat}&lon=${lon}&appid=${token}&units=metric
-`);
+export async function ForecastApi({ lat, lon }: LatLonProps): Promise<ForecastResponse> {
+    const response = await fetch(baseUrl + `onecall?lat=${lat}&lon=${lon}&appid=${token}&units=metric`);
+    if (!response.ok) {
+        throw new Error('Failed to fetch forecast data');
+    }
     return await response.json();
 }
+
 
 
 /*Api Token:
