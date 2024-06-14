@@ -1,4 +1,3 @@
-
 // @ts-ignore
 import ReactAnimatedWeather from 'react-animated-weather';
 

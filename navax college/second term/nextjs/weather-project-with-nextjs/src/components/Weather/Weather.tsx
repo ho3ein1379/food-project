@@ -1,9 +1,9 @@
-
-import SearchForm from "@/components/Weather/SearchForm";
-import ForecastList from "@/components/Weather/ForecastList";
-import WeatherInfo from "@/components/Weather/WeatherInfo";
 import {useState} from "react";
 import {WeatherApi} from "@/api/api";
+import SearchForm from "@/components/Weather/SearchForm";
+import WeatherInfo from "@/components/Weather/WeatherInfo";
+import ForecastList from "@/components/Weather/ForecastList";
+
 
 interface Props {
     city: string;
@@ -19,23 +19,23 @@ function Weather({city}: Props) {
         daily: []
     });
 
-     const CallWeatherApi = async (city: string) => {
-         const response = await WeatherApi({city});
+    const CallWeatherApi = async (city: string) => {
+        const response = await WeatherApi({city});
 
-         const weather: Weather = {
-             city: response.name,
-             wind: response.wind.speed,
-             humidity: response.main.humidity,
-             description: response.weather[0].description,
-             icon: response.weather[0].icon,
-             daily: []
-         }
-         setWeatherState(weather);
-     }
+        const weather: Weather = {
+            city: response.name,
+            wind: response.wind.speed,
+            humidity: response.main.humidity,
+            description: response.weather[0].description,
+            icon: response.weather[0].icon,
+            daily: []
+        }
+        setWeatherState(weather);
+    }
 
-     if (weatherState.city.length === 0){
-         CallWeatherApi(city)
-     }
+    if (weatherState.city.length === 0){
+        CallWeatherApi(city)
+    }
 
     return (
         <div className="bg-white shadow mt-4 rounded-2xl p-8 py-16">

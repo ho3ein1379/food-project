@@ -1,3 +1,4 @@
+
 import ForecastItem from "@/components/Weather/ForecastItem";
 
 function ForecastList() {
@@ -9,3 +10,4 @@ function ForecastList() {
 }
 
 export default ForecastList;
+
