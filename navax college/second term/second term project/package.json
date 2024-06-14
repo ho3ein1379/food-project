@@ -1,0 +1,24 @@
+{
+  "name": "second-term-project",
+  "version": "1.0.0",
+  "description": "the navax college project with teilwind and typescript (second term).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "the second term project"
+  },
+  "keywords": [
+    "meal"
+  ],
+  "author": "Hossein ariafard",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "swiper": "^11.1.3"
+  }
+}

@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Foodstuffs project</title>
+
+    <link href="../dist/stylesheet.css" rel="stylesheet">
+    <link href="../src/css/stylesSwiper.css" rel="stylesheet">
+    <link href="../src/css/swiper.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="">
+        <header>
+            <div class="shadow-bx hidden z-40 md:hidden"></div>
+            <div class="container">
+                <div class="flex w-full items-center justify-between py-3.5">
+                    <div class="flex">
+                        <img class="max-w-11 max-h-11 md:max-w-85 md:max-h-60" src="../img&icon/Logo.svg" alt="Logo icon">
+                        <div class="flex flex-col items-left pl-2">
+                            <p class="text-2xl flex flex-col justify-center md:text-5xl text-emerald-500">LOGO</p>
+                            <p class="text-fs6 md:text-11 text-blue-950">Mart & Grocery</p>
+                        </div>
+                    </div>
+                    <div class="md:hidden">
+                        <img class="menu-icon" src="../img&icon/menu.svg" alt="menu icon">
+                    </div>
+                    <div class="hidden md:flex md:items-center md:justify-end">
+                        <input class="min-w-700 min-h-50 md:border-2 md:border-green-200 md:rounded-md md:outline-customGreen1 md:relative md:px-2" type="text" placeholder="Search for items">
+                        <img class="md:max-h-5 md:absolute md:pr-2" src="../img&icon/search icon.svg" alt="search icon desktop">
+                    </div>
+                    <div class="hidden md:flex md:flex-wrap md:justify-between md:gap-2">
+                        <div class="flex items-center">
+                            <img src="../img&icon/fi-rs-user.svg" alt="user icon desktop"><p>Account</p>
+                        </div>
+                        <div class="flex items-center relative">
+                            <div class="flex items-start justify-end">
+                                <img class="relative z-10 pr-1" src="../img&icon/basket shop icon.svg" alt="basket shop icon desktop">
+                                <p class="flex z-20 justify-center absolute bg-emerald-500 text-xs w-4 h-4 text-white rounded-30">4</p>
+                            </div>
+                            <p class="z-20">Cart</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-customGrey1 mt-4 w-full md:m-0 md:hidden"></div>
+            </div>
+            <div class="container">
+                <div class="flex flex-row justify-between md:hidden py-3">
+                    <div class="flex items-center">
+                        <img src="../img&icon/search icon.svg" alt="search icon mobile">
+                    </div>
+                    <div class="flex items-center">
+                        <img src="../img&icon/fi-rs-user.svg" alt="user icon mobile">
+                        <div class="flex items-center relative">
+                            <div class="flex items-start justify-end">
+                                <img class="relative z-10 pr-1" src="../img&icon/basket shop icon.svg" alt="basket shop icon desktop">
+                                <p class="flex z-20 justify-center absolute bg-emerald-500 text-xs w-4 h-4 text-white rounded-30">4</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-customGrey1 mt-4 w-full md:m-0"></div>
+            </div>
+            <div class="container">
+                <div class="menu-details translate-x-minus100% w-4/5 min-h-full pl-6 rounded-10 pt-6 z-50 absolute bg-white items-left top-0 left-0 md:pl-0 md:pt-0 md:w-full md:translate-x-0 md:z-0 md:static md:items-center md:flex md:justify-between md:py-3.5">
+                    <div class="flex flex-col">
+                        <div class="categories-btn flex flex-row items-center mb-3 md:mb-0">
+                            <button class="flex flex-row items-center text-white rounded bg-emerald-500 py-2 px-2 gap-2"><img class="w-4 h-4 filter-white" src="../img&icon/categories.svg" alt="categories icon">Browse All Categories <img class="arrow-icon filter-white w-30 h-26" src="../img&icon/arrow down.svg" alt="arrow icon"></button>
+                        </div>
+                        <div class="categories hidden flex-col mb-3 md:flex-row md:flex-wrap md:border-2 md:border-customGreen3 md:max-w-500 md:max-h-412 md:px-6 md:py-5 md:rounded-5 md:gap-4 md:mt-14 md:z-20 md:absolute md:bg-white">
+                            <div class="flex items-center md:flex md:border md:border-customGrey1 max-w-211 max-h-48 md:rounded-5 md:flex-row md:basis-2/4 gap-5 md:pl-3 py-2">
+                                <img class="flex self-start max-w-30 max-h-30" src="../img&icon/milks-icon.svg" alt="milks icon">
+                                <p class="text-sm text-customBlueNavy">Milks and Dairies</p>
+                            </div>
+                            <div class="flex items-center md:flex md:border md:border-customGrey1 md:max-w-211 md:max-h-48 md:rounded-5 md:flex-row md:basis-2/4 gap-5 md:pl-3 py-2">
+                                <img class="flex self-start max-w-30 max-h-30" src="../img&icon/drinks-icon.svg" alt="drinks icon">
+                                <p class="text-sm text-customBlueNavy">Wines & Drinks</p>
+                            </div>
+                            <div class="flex items-center md:flex md:border md:border-customGreen3 max-w-211 max-h-48 md:rounded-5 md:flex-row md:basis-2/4 gap-5 md:pl-3 md:py-2 md:shadow-customBlack2 md:shadow-header1BoxShadow">
+                                <img class="flex self-start max-w-30 max-h-30" src="../img&icon/dress-icon.svg" alt="dress icon">
+                                <p class="text-sm text-customBlueNavy">Clothing & beauty</p>
+                            </div>
+                            <div class="flex items-center md:flex md:border md:border-customGrey1 max-w-211 max-h-48 md:rounded-5 md:flex-row md:basis-2/4 gap-5 md:pl-3 py-2">
+                                <img class="flex self-start max-w-30 max-h-30" src="../img&icon/sea-food-icon.svg" alt="seafood icon">
+                                <p class="text-sm text-customBlueNavy">Fresh Seafood</p>
+                            </div>
+                            <div class="flex items-center md:flex md:border md:border-customGrey1 max-w-211 max-h-48 md:rounded-5 md:flex-row md:basis-2/4 gap-5 md:pl-3 py-2">
+                                <img class="flex self-start max-w-30 max-h-30" src="../img&icon/pet-food-icon.svg" alt="pet food icon">
+                                <p class="text-sm text-customBlueNavy">Pet Foods & Toy</p>
+                            </div>
+                            <div class="flex items-center md:flex md:border md:border-customGrey1 max-w-211 max-h-48 md:rounded-5 md:flex-row md:basis-2/4 gap-5 md:pl-3 py-2">
+                                <img class="flex self-start max-w-30 max-h-30" src="../img&icon/fast-food-icon.svg" alt="fast food icon">
+                                <p class="text-sm text-customBlueNavy">Fast food</p>
+                            </div>
+                            <div class="flex items-center md:flex md:border md:border-customGrey1 max-w-211 max-h-48 md:rounded-5 md:flex-row md:basis-2/4 gap-5 md:pl-3 py-2">
+                                <img class="flex self-start max-w-30 max-h-30" src="../img&icon/baking-icon.svg" alt="baking icon">
+                                <p class="text-sm text-customBlueNavy">Baking material</p>
+                            </div>
+                            <div class="flex items-center md:flex md:border md:border-customGrey1 max-w-211 max-h-48 md:rounded-5 md:flex-row md:basis-2/4 gap-5 md:pl-3 py-2">
+                                <img class="flex self-start max-w-30 max-h-30" src="../img&icon/vegetables-icon(header).svg" alt="vegetables icon">
+                                <p class="text-sm text-customBlueNavy">Vegetables</p>
+                            </div>
+                            <div class="flex items-center md:flex md:border md:border-customGrey1 max-w-211 max-h-48 md:rounded-5 md:flex-row md:basis-2/4 gap-5 md:pl-3 py-2">
+                                <img class="flex self-start max-w-30 max-h-30" src="../img&icon/fruit-icon.svg" alt="fruit icon">
+                                <p class="text-sm text-customBlueNavy">Fresh Fruit</p>
+                            </div>
+                            <div class="flex items-center md:flex md:border md:border-customGrey1 max-w-211 max-h-48 md:rounded-5 md:flex-row md:basis-2/4 gap-5 md:pl-3 py-2">
+                                <img class="flex self-start max-w-30 max-h-30" src="../img&icon/juice-icon(header).svg" alt="juice icon">
+                                <p class="text-sm text-customBlueNavy">Bread and Juice</p>
+                            </div>
+                            <div class="hidden md:flex md:items-center md:justify-center md:basis-full md:gap-2">
+                                <p class="border-2 text-lg border-customGreen1 text-customGreen1 py-0 px-2 rounded-full">+</p>
+                                <p class="text-customGrey2">More Categories</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items-left gap-5 mb-3 flex flex-col md:flex-row md:items-center">
+                        <p class="flex items-center gap-1"><img class="filter-green w-5 h-5" src="../img&icon/flame.svg" alt="flame icon"> Hot Deals</p>
+                        <p>Home</p>
+                        <p>Vegetables</p>
+                        <p>Drink</p>
+                    </div>
+                    <div class="hidden md:flex md:flex-row md:items-center md:gap-1">
+                        <img class="w-9 h-9" src="../img&icon/headset.svg" alt="headset icon">
+                        <p class="flex flex-col text-2xl text-emerald-500">1900 - 8888 <span class="text-11 text-neutral-700">24/7 Support Center</span></p>
+                    </div>
+                </div>
+                <div class="border border-customGrey1 mt-4 w-full md:m-0"></div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="flex items-center justify-between rounded-md bg-header-bg bg-orange-100 md:min-h-400 md:mb-14 md:mt-20">
+                    <div class="flex flex-col pl-2 md:pl-20">
+                        <h1 class="text-xl md:text-7xl text-customBlueNavy md:pb-8">Don’t miss amazing grocery deals</h1>
+                        <p class="hidden md:block md:pb-8 md:text-customGrey2">Sign up for the daily newsletter</p>
+                        <div class="hidden md:flex items-center relative mt-5">
+                            <img class="absolute z-20 max-w-4 max-h-4 left-4" src="../img&icon/subscribe.svg" alt="subscribe icon">
+                            <input class="min-w-440 min-h-12 rounded-30 z-10 pl-14 outline-customGreen1" type="text" placeholder="Your email address">
+                            <div class="flex items-center justify-end">
+                                <button class="absolute min-w-150 min-h-12 text-white bg-emerald-500 rounded-30 z-30">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex pb-4">
+                        <img class="hidden md:block md:min-w-900" src="../img&icon/fresh-apples.svg" alt="apples img desktop">
+                        <img class="max-w-218 h-full md:hidden" src="../img&icon/fresh-apples.svg" alt="apples img mobile">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flex flex-row relative items-center mt-3 md:hidden">
+                    <img class="absolute z-20 w-4 h-4 left-4" src="../img&icon/subscribe.svg" alt="subscribe icon">
+                    <input class="w-full bg-customGrey1 min-h-12 outline-customGreen1 rounded-30 z-10 pl-10" type="text" placeholder="Your email address">
+                    <div class="flex items-center justify-end">
+                        <button class="absolute min-w-120 min-h-12 items-start text-white text-sm bg-emerald-500 rounded-30 z-30">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flex flex-col">
+                    <div class="hidden md:flex md:items-start md:mt-4 md:mb-8">
+                        <h2 class="text-32">Featured Categories</h2>
+                    </div>
+                    <div class="flex basis-1/3 flex-wrap mt-20 md:flex md:mt-10 md:flex-wrap">
+                        <div class="bg-main1color1 mb-2 rounded-10 text-center p-2 md:pb-2 md:px-3 border border-customGreen2 shadow-customBlack shadow-main1BoxShadow">
+                            <img class="max-w-89 min-h-68 md:min-h-120 md:max-w-101" src="../img&icon/hamburger.svg" alt="hamburger img">
+                            <h3 class="text-xs md:text-base">Hamburger</h3>
+                            <p class="hidden md:block md:text-customGrey2 md:text-xs">14 items</p>
+                        </div>
+                        <div class="bg-main1color2 ml-1 mb-2 rounded-10 text-center p-2 md:ml-6 md:pb-2 md:px-3">
+                            <img class="max-w-89 min-h-68 md:min-h-120 md:max-w-101" src="../img&icon/persimmon.svg" alt="persimmon img">
+                            <h3 class="text-xs md:text-base">Persimmon</h3>
+                            <p class="hidden md:block md:text-customGrey2 md:text-xs">17 items</p>
+                        </div>
+                        <div class="bg-main1color3 ml-1 mb-2 rounded-10 text-center p-2 md:ml-6 md:pb-2 md:px-3">
+                            <img class="max-w-89 min-h-68 md:min-h-120 md:max-w-101" src="../img&icon/organicKiwi.svg" alt="organicKiwi img">
+                            <h3 class="text-xs md:text-base">Organic Kiwi</h3>
+                            <p class="hidden md:block md:text-customGrey2 md:text-xs">21 items</p>
+                        </div>
+                        <div class="bg-main1color4 mb-2 rounded-10 text-center p-2 md:ml-6 md:pb-2 md:px-3">
+                            <img class="max-w-89 min-h-68 md:min-h-120 md:max-w-101" src="../img&icon/redApple.svg" alt="redApple img">
+                            <h3 class="text-xs md:text-base">Red Apple</h3>
+                            <p class="hidden md:block md:text-customGrey2 md:text-xs">68 items</p>
+                        </div>
+                        <div class="bg-main1color5 ml-1 mb-2 rounded-10 text-center p-2 md:ml-6 md:pb-2 md:px-3">
+                            <img class="max-w-89 min-h-68 md:min-h-120 md:max-w-101" src="../img&icon/snack.svg" alt="snack img">
+                            <h3 class="text-xs md:text-base">Snack</h3>
+                            <p class="hidden md:block md:text-customGrey2 md:text-xs">34 items</p>
+                        </div>
+                        <div class="bg-main1color6 ml-1 mb-2 rounded-10 text-center p-2 md:ml-6 md:pb-2 md:px-3">
+                            <img class="max-w-89 min-h-68 md:min-h-120 md:max-w-101" src="../img&icon/black plum.svg" alt="black plum img">
+                            <h3 class="text-xs md:text-base">Black plum</h3>
+                            <p class="hidden md:block md:text-customGrey2 md:text-xs">25 items</p>
+                        </div>
+                        <div class="bg-main1color1 mb-2 rounded-10 text-center p-2 md:ml-6 md:pb-2 md:px-3">
+                            <img class="max-w-89 min-h-68 md:min-h-120 md:max-w-101" src="../img&icon/vegetables.svg" alt="vegetables img">
+                            <h3 class="text-xs md:text-base">Vegetables</h3>
+                            <p class="hidden md:block md:text-customGrey2 md:text-xs">65 items</p>
+                        </div>
+                        <div class="bg-main1color2 ml-1 mb-2 rounded-10 text-center p-2 md:ml-6 md:pb-2 md:px-3">
+                            <img class="max-w-89 min-h-68 md:min-h-120 md:max-w-101" src="../img&icon/headphone.svg" alt="headphone img">
+                            <h3 class="text-xs md:text-base">Headphone</h3>
+                            <p class="hidden md:block md:text-customGrey2 md:text-xs">33 items</p>
+                        </div>
+                        <div class="bg-main1color1 ml-1 mb-2 rounded-10 text-center p-2 md:ml-6 md:pb-2 md:px-3">
+                            <img class="max-w-89 min-h-68 md:min-h-120 md:max-w-101" src="../img&icon/cake&milk.svg" alt="cake&milk img">
+                            <h3 class="text-xs md:text-base">Cake & Milk</h3>
+                            <p class="hidden md:block md:text-customGrey2 md:text-xs">54 items</p>
+                        </div>
+                        <div class="hidden md:block bg-main1color6 ml-4 mb-2 rounded-10 text-center p-2 md:ml-6 md:pb-2 md:px-3">
+                            <img class="max-w-89 min-h-68 md:min-h-120 md:max-w-101" src="../img&icon/orange.svg" alt="cake&milk img">
+                            <h3 class="text-xs md:text-base">Orange</h3>
+                            <p class="hidden md:block md:text-customGrey2 md:text-xs">63 items</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="swiper mySwiper flex items-center flex-row mt-20 md:mt-28">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="flex items-center justify-start bg-mainOnionBg bg-right-bottom bg-no-repeat bg-customCream py-24 md:py-20 md:basis-1/3 rounded-10 pl-5 md:pl-8">
+                                <div class="flex flex-col z-20">
+                                    <h2 class="text-customBlueNavy text-left text-base md:text-2xl pb-8 md:pr-16">Everyday Fresh & Clean with Our Products</h2>
+                                    <div class="flex text-white bg-customGreen1 rounded p-2 justify-between max-w-24">
+                                        <button class="relative text-xs">Shop Now</button>
+                                        <div class="flex justify-end items-center">
+                                            <img class="filter-white max-h-2.5 w-11px" src="../img&icon/arrow right.svg" alt="arrow right icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex items-center bg-customPink bg-mainJuiceBg bg-right-bottom bg-no-repeat md:ml-4 py-24 md:py-20 md:basis-1/3 rounded-10 pl-5 md:pl-8">
+                                <div class="flex flex-col z-20">
+                                    <h2 class="text-customBlueNavy text-left text-base md:text-2xl pb-8 pr-16">Make your Breakfast Healthy and Easy</h2>
+                                    <div class="flex text-white bg-customYellow md:bg-customGreen1 rounded p-2 justify-between max-w-24">
+                                        <button class="relative text-xs">Shop Now</button>
+                                        <div class="flex justify-end items-center">
+                                            <img class="filter-white max-h-2.5 w-11px absolute" src="../img&icon/arrow right.svg" alt="arrow right icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex items-center bg-mainVegetablesBg bg-right-bottom bg-no-repeat bg-customBlue md:ml-4 py-24 md:py-20 md:basis-1/3 rounded-10 pl-5 md:pl-8">
+                                <div class="flex flex-col z-20">
+                                    <h2 class="text-customBlueNavy text-base text-left md:text-2xl pb-8 pr-16 md:pr-24">The best Organic Products Online</h2>
+                                    <div class="flex text-white bg-customYellow rounded p-2 justify-between max-w-24">
+                                        <button class="relative text-xs">Shop Now</button>
+                                        <div class="flex justify-end items-center">
+                                            <img class="filter-white max-h-2.5 w-11px absolute" src="../img&icon/arrow right.svg" alt="arrow right icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="swiper mySwiper2 flex flex-col mt-28">
+                    <div class="flex items-center justify-between my-4 mb-8">
+                        <h2 class="text-base md:text-32">Popular Products</h2>
+                        <div class="flex">
+                            <img class="flex max-w-3.5 max-h-3 md:hidden" src="../img&icon/align right(arrow).svg" alt="arrow left">
+                            <div class="hidden md:flex md:gap-2">
+                                <div class="bg-customGrey1 p-3 rounded-30">
+                                    <img class="max-w-3.5 max-h-3" src="../img&icon/arrow left.svg" alt="arrow left">
+                                </div>
+                                <div class="bg-customGreen1 p-3 rounded-30">
+                                    <img class="filter-white max-w-3.5 max-h-3" src="../img&icon/arrow right.svg" alt="arrow right">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="flex flex-col border border-customGreen3 rounded-10 shadow-customBlack shadow-main1BoxShadow pb-3 bg-white md:py-6">
+                                <div class="flex">
+                                    <img class="flex rounded-t-10 md:rounded-none" src="../img&icon/ProductLabel.svg" alt="product label">
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <img class="w-40 min-h-120 md:relative md:min-h-168 md:max-w-232" src="../img&icon/mango.svg" alt="mango img">
+                                    <div class="hidden md:flex items-center justify-around md:min-w-90 md:min-h-6 bg-white absolute border border-customGreen3 rounded">
+                                        <img class="max-w-3.5 max-h-3.5 filter-green" src="../img&icon/heart.svg" alt="heart icon">
+                                        <img class="max-w-3.5 max-h-3.5 filter-green" src="../img&icon/random.svg" alt="random icon">
+                                        <img class="max-w-3.5 max-h-3.5 filter-green" src="../img&icon/eye-icon.svg" alt="eye icon">
+                                    </div>
+                                </div>
+                                <div class="flex flex-col px-3">
+                                    <p class="text-customGrey2 text-xs pb-1">Hodo Foods</p>
+                                    <h3 class="popular-text text-customBlueNavy text-xs pb-1 md:text-sm">Seeds of Change Organic Quinoa, Brown, & Red Rice</h3>
+                                    <div class="flex items-center gap-1">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <p class="text-xs text-customGrey2">(4.0)</p>
+                                    </div>
+                                    <p class="text-customGrey2 text-xs pb-4 pt-1">500 gram</p>
+                                    <div class="flex flex-row justify-between items-center">
+                                        <div class="flex items-end">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                        <div class="flex flex-row items-center border border-customGreen1 py-1 px-2 md:px-3 rounded">
+                                            <p class="text-sm text-customGreen1 md:pr-5">1</p>
+                                            <div class="hidden md:flex md:flex-col md:pl-3">
+                                                <img class="max-w-2.5 max-h-2.5 filter-green" src="../img&icon/arrow up.svg" alt="arrow up">
+                                                <img class="max-w-2.5 max-h-2.5 filter-green" src="../img&icon/arrow down.svg" alt="arrow down">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col shadow-customBlack shadow-main1BoxShadow bg-white md:shadow-none md:border md:border-gray-200 rounded-10 ml-3.5 pb-3 md:py-6">
+                                <div class="flex items-start justify-start">
+                                    <img class="rounded-t-10 md:rounded-none" src="../img&icon/ProductLabel-Hot.svg" alt="product label">
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <img class="w-40 min-h-120 md:relative md:min-h-168 md:max-w-232" src="../img&icon/corn.svg" alt="corn img">
+                                </div>
+                                <div class="flex flex-col px-3">
+                                    <p class="text-customGrey2 text-xs pb-1">Hodo Foods</p>
+                                    <h3 class="popular-text text-customBlueNavy text-xs pb-1 md:text-sm">All Natural Italian-Style Chicken Meatballs</h3>
+                                    <div class="flex items-center gap-1">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <p class="text-xs text-customGrey2">(4.0)</p>
+                                    </div>
+                                    <p class="text-customGrey2 text-xs pb-4 pt-1">500 gram</p>
+                                    <div class="flex flex-row justify-between items-center">
+                                        <div class="flex items-end">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                        <div class="flex flex-row items-center bg-customGreen3 text-customGreen1 py-1 px-2 rounded">
+                                            <p class="hidden md:block md:text-sm">Add&nbsp;&nbsp;+</p>
+                                            <p class="block md:hidden text-sm">+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col shadow-customBlack shadow-main1BoxShadow bg-white md:shadow-none md:border md:border-gray-200 rounded-10 ml-3.5 pb-3 md:py-6">
+                                <div class="flex items-start justify-start">
+                                    <img class="rounded-t-10 md:rounded-none" src="../img&icon/ProductLabel-Sale.svg" alt="product label">
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <img class="w-32 md:relative md:min-h-168 md:max-w-232" src="../img&icon/orange-main3.svg" alt="orange img">
+                                </div>
+                                <div class="flex flex-col px-3 pt-5 md:pt-0">
+                                    <p class="text-customGrey2 text-xs pb-1">Hodo Foods</p>
+                                    <h3 class="popular-text text-customBlueNavy text-xs pb-1 md:text-sm">Angie’s Boom chickapop Sweet & Salty Kettle Corn</h3>
+                                    <div class="flex items-center gap-1">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <p class="text-xs text-customGrey2">(4.0)</p>
+                                    </div>
+                                    <p class="text-customGrey2 text-xs pb-4 pt-1">500 gram</p>
+                                    <div class="flex flex-row justify-between items-center">
+                                        <div class="flex items-end">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                        <div class="flex flex-row items-center bg-customGreen3 text-customGreen1 py-1 px-2 rounded">
+                                            <p class="hidden md:block md:text-sm">Add&nbsp;&nbsp;+</p>
+                                            <p class="block md:hidden text-sm">+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col shadow-customBlack shadow-main1BoxShadow bg-white md:shadow-none border border-customGreen3 rounded-10 ml-3.5 pb-3 md:pt-14 md:py-6 pt-8">
+                                <div class="flex items-center justify-center">
+                                    <img class="w-40 min-h-120 md:relative md:min-h-168 md:max-w-232" src="../img&icon/sweet pepper.svg" alt="corn img">
+                                </div>
+                                <div class="flex flex-col px-3">
+                                    <p class="text-customGrey2 text-xs pb-1">Hodo Foods</p>
+                                    <h3 class="popular-text text-customBlueNavy text-xs pb-1 md:text-sm">Foster Farms Takeout Crispy Classic Buffalo Wings</h3>
+                                    <div class="flex items-center gap-1">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <p class="text-xs text-customGrey2">(4.0)</p>
+                                    </div>
+                                    <p class="text-customGrey2 text-xs pb-4 pt-1">500 gram</p>
+                                    <div class="flex flex-row justify-between items-center">
+                                        <div class="flex items-end">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                        <div class="flex flex-row items-center bg-customGreen3 text-customGreen1 py-1 px-2 rounded">
+                                            <p class="hidden md:block md:text-sm">Add&nbsp;&nbsp;+</p>
+                                            <p class="block md:hidden text-sm">+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col shadow-customBlack shadow-main1BoxShadow bg-white md:shadow-none md:border md:border-gray-200 rounded-10 ml-3.5 pb-3 md:pt-14 md:py-6 pt-8">
+                                <div class="flex items-center justify-center">
+                                    <img class="w-40 min-h-120 md:relative md:min-h-168 md:max-w-232" src="../img&icon/Lemon.svg" alt="corn img">
+                                </div>
+                                <div class="flex flex-col px-3">
+                                    <p class="text-customGrey2 text-xs pb-1">Hodo Foods</p>
+                                    <h3 class="popular-text text-customBlueNavy text-xs pb-1 md:text-sm">Blue Diamond Almonds Lightly Salted Vegetables</h3>
+                                    <div class="flex items-center gap-1">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <p class="text-xs text-customGrey2">(4.0)</p>
+                                    </div>
+                                    <p class="text-customGrey2 text-xs pb-4 pt-1">500 gram</p>
+                                    <div class="flex flex-row justify-between items-center">
+                                        <div class="flex items-end">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                        <div class="flex flex-row items-center bg-customGreen3 text-customGreen1 py-1 px-2 rounded">
+                                            <p class="hidden md:block md:text-sm">Add&nbsp;&nbsp;+</p>
+                                            <p class="block md:hidden text-sm">+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="swiper mySwiper2 flex flex-col mt-28">
+                    <div class="flex items-center justify-between my-4 mb-8">
+                        <h2 class="text-base md:text-32">Popular Fruits</h2>
+                        <div class="flex">
+                            <img class="flex max-w-3.5 max-h-3 md:hidden" src="../img&icon/align right(arrow).svg" alt="arrow left">
+                            <div class="hidden md:flex md:gap-2">
+                                <div class="bg-customGrey1 p-3 rounded-30">
+                                    <img class="max-w-3.5 max-h-3" src="../img&icon/arrow left.svg" alt="arrow left">
+                                </div>
+                                <div class="bg-customGreen1 p-3 rounded-30">
+                                    <img class="filter-white max-w-3.5 max-h-3" src="../img&icon/arrow right.svg" alt="arrow right">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="flex flex-col shadow-customBlack shadow-main1BoxShadow bg-white md:shadow-none md:border md:border-gray-200 ml-3.5 rounded-10 pb-3 md:ml-0 md:pt-14 md:py-6 pt-8">
+                                <div class="flex items-center justify-center">
+                                    <img class="w-40 min-h-120 md:relative md:min-h-168 md:max-w-232" src="../img&icon/Lemon.svg" alt="corn img">
+                                </div>
+                                <div class="flex flex-col px-3">
+                                    <p class="text-customGrey2 text-xs pb-1">Hodo Foods</p>
+                                    <h3 class="popular-text text-customBlueNavy text-xs pb-1 md:text-sm">Blue Diamond Almonds Lightly Salted Vegetables</h3>
+                                    <div class="flex items-center gap-1">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <p class="text-xs text-customGrey2">(4.0)</p>
+                                    </div>
+                                    <p class="text-customGrey2 text-xs pb-5 pt-1">500 gram</p>
+                                    <div class="flex flex-row justify-between items-center">
+                                        <div class="flex items-end">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                        <div class="flex flex-row items-center bg-customGreen3 text-customGreen1 py-1 px-2 rounded">
+                                            <p class="hidden md:block md:text-sm">Add&nbsp;&nbsp;+</p>
+                                            <p class="block md:hidden text-sm">+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col border border-customGreen3 rounded-10 shadow-customBlack shadow-main1BoxShadow ml-3.5 pb-3 bg-white md:py-6">
+                                <div class="flex">
+                                    <img class="flex rounded-t-10 md:rounded-none" src="../img&icon/ProductLabel.svg" alt="product label">
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <img class="w-40 min-h-120 md:relative md:min-h-168 md:max-w-232" src="../img&icon/mango.svg" alt="mango img">
+                                    <div class="hidden md:flex items-center justify-around md:min-w-90 md:min-h-6 bg-white absolute border border-customGreen3 rounded">
+                                        <img class="max-w-3.5 max-h-3.5 filter-green" src="../img&icon/heart.svg" alt="heart icon">
+                                        <img class="max-w-3.5 max-h-3.5 filter-green" src="../img&icon/random.svg" alt="random icon">
+                                        <img class="max-w-3.5 max-h-3.5 filter-green" src="../img&icon/eye-icon.svg" alt="eye icon">
+                                    </div>
+                                </div>
+                                <div class="flex flex-col px-3">
+                                    <p class="text-customGrey2 text-xs pb-1">Hodo Foods</p>
+                                    <h3 class="popular-text text-customBlueNavy text-xs pb-1 md:text-sm">Seeds of Change Organic Quinoa, Brown, & Red Rice</h3>
+                                    <div class="flex items-center gap-1">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <p class="text-xs text-customGrey2">(4.0)</p>
+                                    </div>
+                                    <p class="text-customGrey2 text-xs pb-4 pt-1">500 gram</p>
+                                    <div class="flex flex-row justify-between items-center">
+                                        <div class="flex items-end">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                        <div class="flex flex-row items-center border border-customGreen1 py-1 px-2 md:px-3 rounded">
+                                            <p class="text-sm text-customGreen1 md:pr-5">1</p>
+                                            <div class="hidden md:flex md:flex-col md:pl-3">
+                                                <img class="max-w-2.5 max-h-2.5 filter-green" src="../img&icon/arrow up.svg" alt="arrow up">
+                                                <img class="max-w-2.5 max-h-2.5 filter-green" src="../img&icon/arrow down.svg" alt="arrow down">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col shadow-customBlack shadow-main1BoxShadow bg-white md:shadow-none md:border md:border-gray-200 rounded-10 ml-3.5 pb-3 md:py-6">
+                                <div class="flex items-start justify-start">
+                                    <img class="rounded-t-10 md:rounded-none" src="../img&icon/ProductLabel-Hot.svg" alt="product label">
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <img class="w-40 min-h-120 md:relative md:min-h-168 md:max-w-232" src="../img&icon/corn.svg" alt="corn img">
+                                </div>
+                                <div class="flex flex-col px-3">
+                                    <p class="text-customGrey2 text-xs pb-1">Hodo Foods</p>
+                                    <h3 class="popular-text text-customBlueNavy text-xs pb-1 md:text-sm">All Natural Italian-Style Chicken Meatballs</h3>
+                                    <div class="flex items-center gap-1">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <p class="text-xs text-customGrey2">(4.0)</p>
+                                    </div>
+                                    <p class="text-customGrey2 text-xs pb-4 pt-1">500 gram</p>
+                                    <div class="flex flex-row justify-between items-center">
+                                        <div class="flex items-end">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                        <div class="flex flex-row items-center bg-customGreen3 text-customGreen1 py-1 px-2 rounded">
+                                            <p class="hidden md:block md:text-sm">Add&nbsp;&nbsp;+</p>
+                                            <p class="block md:hidden text-sm">+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col shadow-customBlack shadow-main1BoxShadow bg-white md:shadow-none md:border md:border-gray-200 rounded-10 ml-3.5 pb-3 md:py-6">
+                                <div class="flex items-start justify-start">
+                                    <img class="rounded-t-10 md:rounded-none" src="../img&icon/ProductLabel-Sale.svg" alt="product label">
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <img class="w-32 md:relative md:min-h-168 md:max-w-232" src="../img&icon/orange-main3.svg" alt="orange img">
+                                </div>
+                                <div class="flex flex-col px-3 pt-5 md:pt-0">
+                                    <p class="text-customGrey2 text-xs pb-1">Hodo Foods</p>
+                                    <h3 class="popular-text text-customBlueNavy text-xs pb-1 md:text-sm">Angie’s Boom chickapop Sweet & Salty Kettle Corn</h3>
+                                    <div class="flex items-center gap-1">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <p class="text-xs text-customGrey2">(4.0)</p>
+                                    </div>
+                                    <p class="text-customGrey2 text-xs pb-4 pt-1">500 gram</p>
+                                    <div class="flex flex-row justify-between items-center">
+                                        <div class="flex items-end">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                        <div class="flex flex-row items-center bg-customGreen3 text-customGreen1 py-1 px-2 rounded">
+                                            <p class="hidden md:block md:text-sm">Add&nbsp;&nbsp;+</p>
+                                            <p class="block md:hidden text-sm">+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col shadow-customBlack shadow-main1BoxShadow bg-white md:shadow-none border border-customGreen3 rounded-10 ml-3.5 pb-3 md:pt-14 md:py-6 pt-8">
+                                <div class="flex items-center justify-center">
+                                    <img class="w-40 min-h-120 md:relative md:min-h-168 md:max-w-232" src="../img&icon/sweet pepper.svg" alt="corn img">
+                                </div>
+                                <div class="flex flex-col px-3">
+                                    <p class="text-customGrey2 text-xs pb-1">Hodo Foods</p>
+                                    <h3 class="popular-text text-customBlueNavy text-xs pb-1 md:text-sm">Foster Farms Takeout Crispy Classic Buffalo Wings</h3>
+                                    <div class="flex items-center gap-1">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <p class="text-xs text-customGrey2">(4.0)</p>
+                                    </div>
+                                    <p class="text-customGrey2 text-xs pb-4 pt-1">500 gram</p>
+                                    <div class="flex flex-row justify-between items-center">
+                                        <div class="flex items-end">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                        <div class="flex flex-row items-center bg-customGreen3 text-customGreen1 py-1 px-2 rounded">
+                                            <p class="hidden md:block md:text-sm">Add&nbsp;&nbsp;+</p>
+                                            <p class="block md:hidden text-sm">+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="swiper mySwiper3 flex flex-col mt-10">
+                    <div class="flex items-center justify-between mb-10">
+                        <h2 class="text-base md:text-32">Our-offers</h2>
+                        <div class="flex md:hidden">
+                            <img class="flex max-w-3.5 max-h-3 md:hidden" src="../img&icon/align right(arrow).svg" alt="arrow left">
+                        </div>
+                    </div>
+                    <div class="swiper-wrapper">
+                        <div class="hidden bg-no-repeat leading-none bg-fixed bg-customGreen1 md:flex md:flex-col md:rounded-20 md:pb-3 md:bg-mainLeafBg md:min-w-378 max-h-475 md:py-6">
+                            <div class="flex flex-col pl-8">
+                                <h3 class="text-customBlueNavy text-42px max-w-250 pt-6">Bring nature into your home</h3>
+                                <div class="flex justify-between text-white bg-customYellow rounded p-2 mt-52 max-w-28">
+                                    <button class="text-xs">Shop Now</button>
+                                    <div class="flex justify-end items-center">
+                                        <img class="filter-white max-h-2.5 w-11px" src="../img&icon/arrow right.svg" alt="arrow right icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col shadow-customBlack2 shadow-header1BoxShadow bg-white md:shadow-none md:border md:border-gray-200 rounded-10 md:ml-3.5 pb-3 md:py-6">
+                                <div class="flex items-start justify-start">
+                                    <img class="rounded-t-10 md:rounded-none" src="../img&icon/save-label.svg" alt="product label">
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <img class="w-44 min-h-120 md:relative md:min-h-168 md:max-w-232" src="../img&icon/cucumber-img.svg" alt="cucumber img">
+                                </div>
+                                <div class="flex flex-col px-3">
+                                    <p class="text-customGrey2 text-xs pb-1">Hodo Foods</p>
+                                    <h3 class="text-offers text-customBlueNavy text-xs pb-1 md:text-sm">Seeds of Change Organic Quinoa, Brown, & Red Rice</h3>
+                                    <div class="flex items-center gap-1">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <p class="text-xs text-customGrey2">(4.0)</p>
+                                    </div>
+                                    <p class="text-customGrey2 text-xs pb-2 pt-1">500 gram</p>
+                                    <div class="flex flex-col items-start gap-1">
+                                        <div class="flex items-end">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                        <div class="flex flex-col w-full gap-2 pt-2">
+                                            <div class="flex bg-customGrey1 min-h-1 rounded-5">
+                                                <div class="bg-customGreen1 w-8/12 min-h-1 rounded-5"></div>
+                                            </div>
+                                            <p class="text-xs">Sold: 90/120</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex mt-3">
+                                        <button class="bg-customGreen1 basis-full text-sm text-white rounded py-2"><img class="absolute max-w-4 max-h-4 filter-white md:ml-10" src="../img&icon/basket shop icon.svg" alt="basket icon">Add To Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col shadow-customBlack2 shadow-header1BoxShadow bg-white md:shadow-customBlack md:shadow-main1BoxShadow md:border md:border-customGreen3 rounded-10 ml-3.5 pb-3 md:py-6">
+                                <div class="flex items-start justify-start">
+                                    <img class="rounded-t-10 md:rounded-none" src="../img&icon/save-label.svg" alt="product label">
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <img class="w-44 min-h-120 md:relative md:min-h-168 md:max-w-232" src="../img&icon/hamburger-img.svg" alt="hamburger img">
+                                </div>
+                                <div class="flex flex-col px-3">
+                                    <p class="text-customGrey2 text-xs pb-1">Hodo Foods</p>
+                                    <h3 class="text-offers text-customBlueNavy text-xs pb-1 md:text-sm">All Natural Italian-Style Chicken Meatballs</h3>
+                                    <div class="flex items-center gap-1">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <p class="text-xs text-customGrey2">(4.0)</p>
+                                    </div>
+                                    <p class="text-customGrey2 text-xs pb-2 pt-1">500 gram</p>
+                                    <div class="flex flex-col items-start gap-1">
+                                        <div class="flex items-end">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                        <div class="flex flex-col w-full gap-2 pt-2">
+                                            <div class="flex bg-customGrey1 min-h-1 rounded-5">
+                                                <div class="bg-customGreen1 w-8/12 min-h-1 rounded-5"></div>
+                                            </div>
+                                            <p class="text-xs">Sold: 90/120</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex mt-3">
+                                        <button class="bg-customYellow basis-full text-sm text-white rounded py-2"><img class="absolute max-w-4 max-h-4 filter-white md:ml-10" src="../img&icon/basket shop icon.svg" alt="basket icon">Add To Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col shadow-customBlack2 shadow-header1BoxShadow bg-white md:shadow-none md:border md:border-gray-200 rounded-10 ml-3.5 pb-3 md:py-6">
+                                <div class="flex items-start justify-start">
+                                    <img class="rounded-t-10 md:rounded-none" src="../img&icon/save-label.svg" alt="product label">
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <img class="w-40 max-h-120 md:relative md:min-h-168 md:max-w-232" src="../img&icon/pizza-img.svg" alt="pizza img">
+                                </div>
+                                <div class="flex flex-col px-3">
+                                    <p class="text-customGrey2 text-xs pb-1">Hodo Foods</p>
+                                    <h3 class="text-offers text-customBlueNavy text-xs pb-1 md:text-sm">Angie’s Boom chickapop Sweet & Salty Kettle Corn</h3>
+                                    <div class="flex items-center gap-1">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <p class="text-xs text-customGrey2">(4.0)</p>
+                                    </div>
+                                    <p class="text-customGrey2 text-xs pb-2 pt-1">500 gram</p>
+                                    <div class="flex flex-col items-start gap-1">
+                                        <div class="flex items-end">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                        <div class="flex flex-col w-full gap-2 pt-2">
+                                            <div class="flex bg-customGrey1 min-h-1 rounded-5">
+                                                <div class="bg-customGreen1 w-8/12 min-h-1 rounded-5"></div>
+                                            </div>
+                                            <p class="text-xs">Sold: 90/120</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex mt-3">
+                                        <button class="bg-customGreen1 basis-full text-sm text-white rounded py-2"><img class="absolute max-w-4 max-h-4 filter-white md:ml-10" src="../img&icon/basket shop icon.svg" alt="basket icon">Add To Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col shadow-customBlack2 shadow-header1BoxShadow bg-white md:shadow-none md:border md:border-gray-200 rounded-10 ml-3.5 pb-3 md:py-6">
+                                <div class="flex items-start justify-start">
+                                    <img class="rounded-t-10 md:rounded-none" src="../img&icon/save-label.svg" alt="product label">
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <img class="w-44 max-h-120 md:relative md:max-h-168 md:max-w-232" src="../img&icon/cabbage-img.svg" alt="cabbage img">
+                                </div>
+                                <div class="flex flex-col px-3 md:pt-1">
+                                    <p class="text-customGrey2 text-xs pb-1">Hodo Foods</p>
+                                    <h3 class="text-offers text-customBlueNavy text-xs pb-1 md:text-sm">Foster Farms Takeout Crispy Classic Buffalo Wings</h3>
+                                    <div class="flex items-center gap-1">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                        <p class="text-xs text-customGrey2">(4.0)</p>
+                                    </div>
+                                    <p class="text-customGrey2 text-xs pb-2 pt-1">500 gram</p>
+                                    <div class="flex flex-col items-start gap-1">
+                                        <div class="flex items-end">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                        <div class="flex flex-col w-full gap-2 pt-2">
+                                            <div class="flex bg-customGrey1 min-h-1 rounded-5">
+                                                <div class="bg-customGreen1 w-8/12 min-h-1 rounded-5"></div>
+                                            </div>
+                                            <p class="text-xs">Sold: 90/120</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex mt-3">
+                                        <button class="bg-customGreen1 basis-full text-sm text-white rounded py-2"><img class="absolute max-w-4 max-h-4 filter-white md:ml-10" src="../img&icon/basket shop icon.svg" alt="basket icon">Add To Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="swiper mySwiper5 flex flex-col mt-10">
+                    <div class="flex items-center justify-between mb-10">
+                        <h2 class="text-base md:text-32">Deals Of The Days</h2>
+                        <div class="flex md:hidden">
+                            <img class="flex max-w-3.5 max-h-3" src="../img&icon/align right(arrow).svg" alt="arrow left">
+                        </div>
+                    </div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="flex flex-col items-center">
+                                <div class="flex absolute">
+                                    <img src="../img&icon/Lettuce-img.svg" alt="Lettuce img">
+                                </div>
+                                <div class="flex flex-col relative mt-28">
+                                    <div class="flex justify-center items-end gap-3 mb-3">
+                                        <div class="flex flex-col bg-white items-center rounded-md pb-2 px-4">
+                                            <p class="text-customGreen1 text-29">05</p>
+                                            <p class="text-customGrey2 text-sm">Days</p>
+                                        </div>
+                                        <div class="flex flex-col bg-white items-center rounded-md pb-2 px-4">
+                                            <p class="text-customGreen1 text-29">06</p>
+                                            <p class="text-customGrey2 text-sm">Hours</p>
+                                        </div>
+                                        <div class="flex flex-col bg-white items-center rounded-md pb-2 px-4">
+                                            <p class="text-customGreen1 text-29">56</p>
+                                            <p class="text-customGrey2 text-sm">Mins</p>
+                                        </div>
+                                        <div class="flex flex-col bg-white items-center rounded-md pb-2 px-4">
+                                            <p class="text-customGreen1 text-29">18</p>
+                                            <p class="text-customGrey2 text-sm">Sec</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col bg-white rounded-md mx-6 py-5 px-5 shadow-customBlack shadow-main1BoxShadow">
+                                        <h3 class="text-customBlueNavy pb-1 text-sm">Seeds of Change Organic Quinoa, Brown, & Red Rice</h3>
+                                        <div class="flex items-center gap-1">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <p class="text-xs text-customGrey2">(4.0)</p>
+                                        </div>
+                                        <p class="text-customGrey2 text-xs pb-2 pt-1">500 gram</p>
+                                        <div class="flex flex-row justify-between items-center">
+                                            <div class="flex items-end">
+                                                <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                                <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                            </div>
+                                            <div class="flex flex-row items-center bg-customYellow2 py-1 px-2 rounded">
+                                                <p class="text-sm text-customYellow">Add&nbsp;&nbsp;+</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col items-center">
+                                <div class="flex absolute">
+                                    <img src="../img&icon/orange-slice-img.svg" alt="orange img">
+                                </div>
+                                <div class="flex flex-col relative mt-28">
+                                    <div class="flex justify-center items-end gap-3 mb-3">
+                                        <div class="flex flex-col bg-white items-center rounded-md pb-2 px-4">
+                                            <p class="text-customGreen1 text-29">05</p>
+                                            <p class="text-customGrey2 text-sm">Days</p>
+                                        </div>
+                                        <div class="flex flex-col bg-white items-center rounded-md pb-2 px-4">
+                                            <p class="text-customGreen1 text-29">12</p>
+                                            <p class="text-customGrey2 text-sm">Hours</p>
+                                        </div>
+                                        <div class="flex flex-col bg-white items-center rounded-md pb-2 px-4">
+                                            <p class="text-customGreen1 text-29">52</p>
+                                            <p class="text-customGrey2 text-sm">Mins</p>
+                                        </div>
+                                        <div class="flex flex-col bg-white items-center rounded-md pb-2 px-4">
+                                            <p class="text-customGreen1 text-29">17</p>
+                                            <p class="text-customGrey2 text-sm">Sec</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col bg-white rounded-md mx-6 py-5 px-5 shadow-customBlack shadow-main1BoxShadow">
+                                        <h3 class="text-customBlueNavy pb-1 text-sm">Perdue Simply Smart Organics Gluten Free Breaded</h3>
+                                        <div class="flex items-center gap-1">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <p class="text-xs text-customGrey2">(4.0)</p>
+                                        </div>
+                                        <p class="text-customGrey2 text-xs pb-2 pt-1">500 gram</p>
+                                        <div class="flex flex-row justify-between items-center">
+                                            <div class="flex items-end">
+                                                <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                                <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                            </div>
+                                            <div class="flex flex-row items-center bg-customGreen3 py-1 px-2 rounded">
+                                                <p class="text-sm text-customGreen1">Add&nbsp;&nbsp;+</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col items-center">
+                                <div class="flex absolute">
+                                    <img src="../img&icon/peas-img.svg" alt="peas img">
+                                </div>
+                                <div class="flex flex-col relative mt-28">
+                                    <div class="flex justify-center items-end gap-3 mb-3">
+                                        <div class="flex flex-col bg-white items-center rounded-md pb-2 px-4">
+                                            <p class="text-customGreen1 text-29">05</p>
+                                            <p class="text-customGrey2 text-sm">Days</p>
+                                        </div>
+                                        <div class="flex flex-col bg-white items-center rounded-md pb-2 px-4">
+                                            <p class="text-customGreen1 text-29">05</p>
+                                            <p class="text-customGrey2 text-sm">Hours</p>
+                                        </div>
+                                        <div class="flex flex-col bg-white items-center rounded-md pb-2 px-4">
+                                            <p class="text-customGreen1 text-29">56</p>
+                                            <p class="text-customGrey2 text-sm">Mins</p>
+                                        </div>
+                                        <div class="flex flex-col bg-white items-center rounded-md pb-2 px-4">
+                                            <p class="text-customGreen1 text-29">18</p>
+                                            <p class="text-customGrey2 text-sm">Sec</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col bg-white rounded-md mx-6 py-5 px-5 shadow-customBlack shadow-main1BoxShadow">
+                                        <h3 class="text-customBlueNavy pb-1 text-sm">Signature Wood-Fired Mushroom and Caramelized Red Onion</h3>
+                                        <div class="flex items-center gap-1">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <p class="text-xs text-customGrey2">(4.0)</p>
+                                        </div>
+                                        <p class="text-customGrey2 text-xs pb-2 pt-1">500 gram</p>
+                                        <div class="flex flex-row justify-between items-center">
+                                            <div class="flex items-end">
+                                                <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                                <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                            </div>
+                                            <div class="flex flex-row items-center bg-customGreen3 py-1 px-2 rounded">
+                                                <p class="text-sm text-customGreen1">Add&nbsp;&nbsp;+</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col items-center">
+                                <div class="flex absolute">
+                                    <img src="../img&icon/orange-slice-img2.svg" alt="orange img">
+                                </div>
+                                <div class="flex flex-col relative mt-28">
+                                    <div class="flex justify-center items-end gap-3 mb-3">
+                                        <div class="flex flex-col bg-white items-center rounded-md pb-2 px-4">
+                                            <p class="text-customGreen1 text-29">05</p>
+                                            <p class="text-customGrey2 text-sm">Days</p>
+                                        </div>
+                                        <div class="flex flex-col bg-white items-center rounded-md pb-2 px-4">
+                                            <p class="text-customGreen1 text-29">06</p>
+                                            <p class="text-customGrey2 text-sm">Hours</p>
+                                        </div>
+                                        <div class="flex flex-col bg-white items-center rounded-md pb-2 px-4">
+                                            <p class="text-customGreen1 text-29">56</p>
+                                            <p class="text-customGrey2 text-sm">Mins</p>
+                                        </div>
+                                        <div class="flex flex-col bg-white items-center rounded-md pb-2 px-4">
+                                            <p class="text-customGreen1 text-29">18</p>
+                                            <p class="text-customGrey2 text-sm">Sec</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col bg-white rounded-md mx-6 py-5 px-5 shadow-customBlack shadow-main1BoxShadow">
+                                        <h3 class="text-customBlueNavy pb-1 text-sm pr-12">Simply Lemonade with Raspberry Juice</h3>
+                                        <div class="flex items-center gap-1">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <p class="text-xs text-customGrey2">(4.0)</p>
+                                        </div>
+                                        <p class="text-customGrey2 text-xs pb-2 pt-1">500 gram</p>
+                                        <div class="flex flex-row justify-between items-center">
+                                            <div class="flex items-end">
+                                                <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                                <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                            </div>
+                                            <div class="flex flex-row items-center bg-customGreen3 py-1 px-2 rounded">
+                                                <p class="text-sm text-customGreen1">Add&nbsp;&nbsp;+</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="swiper mySwiper4 flex mt-14">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="flex flex-col gap-4">
+                                <h2 class="text-2xl text-customBlueNavy pb-6">Top Selling</h2>
+                                <div class="flex">
+                                    <img class="" src="../img&icon/avocado-img.svg" alt="avocado img">
+                                    <div class="flex flex-col bg-white rounded-md mx-5 py-5 pr-1">
+                                        <h3 class="sell-text text-customBlueNavy text-xs pb-1 md:text-sm">Nestle Original Coffee-Mate Coffee Creamer</h3>
+                                        <div class="flex items-center gap-1">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <p class="text-xs text-customGrey2">(4.0)</p>
+                                        </div>
+                                        <div class="flex items-end pt-5">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <img class="" src="../img&icon/banana-img.svg" alt="banana img">
+                                    <div class="flex flex-col bg-white rounded-md mx-5 py-5 pr-1">
+                                        <h3 class="sell-text text-customBlueNavy text-xs pb-1 md:text-sm">Organic 100% Grassfed 85_15 Ground Beef</h3>
+                                        <div class="flex items-center gap-1">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <p class="text-xs text-customGrey2">(4.0)</p>
+                                        </div>
+                                        <div class="flex items-end pt-5">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <img class="" src="../img&icon/orange-img(sell main).svg" alt="orange img">
+                                    <div class="flex flex-col bg-white rounded-md mx-5 py-5 pr-1">
+                                        <h3 class="sell-text text-customBlueNavy text-xs pb-1 md:text-sm">Naturally Flavored Salted Caramel Light Roast Coffee</h3>
+                                        <div class="flex items-center gap-1">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <p class="text-xs text-customGrey2">(4.0)</p>
+                                        </div>
+                                        <div class="flex items-end pt-5">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col gap-4">
+                                <h2 class="text-2xl text-customBlueNavy pb-6">Trending Products</h2>
+                                <div class="flex">
+                                    <img class="" src="../img&icon/pomegranate-img.svg" alt="pomegranate img">
+                                    <div class="flex flex-col bg-white rounded-md mx-5 py-5 pr-1">
+                                        <h3 class="sell-text text-customBlueNavy text-xs pb-1 md:text-sm">Organic Cage-Free Grade A Large Brown Eggs</h3>
+                                        <div class="flex items-center gap-1">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <p class="text-xs text-customGrey2">(4.0)</p>
+                                        </div>
+                                        <div class="flex items-end pt-5">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <img class="" src="../img&icon/yellow cake-img.svg" alt="cake img">
+                                    <div class="flex flex-col bg-white rounded-md mx-5 py-5 pr-1">
+                                        <h3 class="sell-text text-customBlueNavy text-xs pb-1 md:text-sm">Seeds of Change Organic Quinoa, Brown, & Red Rice</h3>
+                                        <div class="flex items-center gap-1">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <p class="text-xs text-customGrey2">(4.0)</p>
+                                        </div>
+                                        <div class="flex items-end pt-5">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <img class="" src="../img&icon/corn-img(sell main).svg" alt="corn img">
+                                    <div class="flex flex-col bg-white rounded-md mx-5 py-5 pr-1">
+                                        <h3 class="sell-text text-customBlueNavy text-xs pb-1 md:text-sm">Naturally Flavored Cinnamon Vanilla Light Roast Coffee</h3>
+                                        <div class="flex items-center gap-1">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <p class="text-xs text-customGrey2">(4.0)</p>
+                                        </div>
+                                        <div class="flex items-end pt-5">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col gap-4">
+                                <h2 class="text-2xl text-customBlueNavy pb-6">Recently added</h2>
+                                <div class="flex">
+                                    <img class="m" src="../img&icon/mango-juice-img.svg" alt="juice img">
+                                    <div class="flex flex-col bg-white rounded-md mx-5 py-5 pr-1">
+                                        <h3 class="sell-text text-customBlueNavy text-xs pb-1 md:text-sm">Organic Frozen Triple Berry Blend</h3>
+                                        <div class="flex items-center gap-1">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <p class="text-xs text-customGrey2">(4.0)</p>
+                                        </div>
+                                        <div class="flex items-end pt-5">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <img class="" src="../img&icon/watermelon-slice-img.svg" alt="watermelon img">
+                                    <div class="flex flex-col bg-white rounded-md mx-5 py-5 pr-1">
+                                        <h3 class="sell-text text-customBlueNavy text-xs pb-1 md:text-sm">Pepperidge Farm Farmhouse Hearty White Bread</h3>
+                                        <div class="flex items-center gap-1">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <p class="text-xs text-customGrey2">(4.0)</p>
+                                        </div>
+                                        <div class="flex items-end pt-5">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <img class="" src="../img&icon/mango-juice-img2.svg" alt="juice img">
+                                    <div class="flex flex-col bg-white rounded-md mx-5 py-5 pr-1">
+                                        <h3 class="sell-text text-customBlueNavy text-xs pb-1 md:text-sm">Oroweat Country Buttermilk Bread</h3>
+                                        <div class="flex items-center gap-1">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <p class="text-xs text-customGrey2">(4.0)</p>
+                                        </div>
+                                        <div class="flex items-end pt-5">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col gap-4">
+                                <h2 class="text-2xl text-customBlueNavy pb-6">Top Rated</h2>
+                                <div class="flex">
+                                    <img class="" src="../img&icon/potato-img.svg" alt="potato img">
+                                    <div class="flex flex-col bg-white rounded-md mx-5 py-5 pr-1">
+                                        <h3 class="sell-text text-customBlueNavy text-xs pb-1 md:text-sm">Foster Farms Takeout Crispy Classic Buffalo Wings</h3>
+                                        <div class="flex items-center gap-1">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <p class="text-xs text-customGrey2">(4.0)</p>
+                                        </div>
+                                        <div class="flex items-end pt-5">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <img class="" src="../img&icon/sweet pepper-img(sell main).svg" alt="sweet pepper img">
+                                    <div class="flex flex-col bg-white rounded-md mx-5 py-5 pr-1">
+                                        <h3 class="sell-text text-customBlueNavy text-xs pb-1 md:text-sm">Angie’s Boomchickapop Sweet & Salty Kettle Corn</h3>
+                                        <div class="flex items-center gap-1">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <p class="text-xs text-customGrey2">(4.0)</p>
+                                        </div>
+                                        <div class="flex items-end pt-5">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <img class="" src="../img&icon/lemonade-img.svg" alt="lemonade img">
+                                    <div class="flex flex-col bg-white rounded-md mx-5 py-5 pr-1">
+                                        <h3 class="sell-text text-customBlueNavy text-xs pb-1 md:text-sm">All Natural Italian-Style Chicken Meatballs</h3>
+                                        <div class="flex items-center gap-1">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-yellow" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <img class="max-w-106 max-h-18 filter-gray" src="../img&icon/star-icon.svg" alt="star icon">
+                                            <p class="text-xs text-customGrey2">(4.0)</p>
+                                        </div>
+                                        <div class="flex items-end pt-5">
+                                            <p class="text-sm md:text-xl text-customGreen1 pr-1">$2.51</p>
+                                            <p class="line-through text-customGrey2 text-xs">$2.80</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flex mt-14 bg-mainLastBg items-center justify-between bg-no-repeat bg-customGreen3 rounded-xl md:pt-5">
+                    <div class="flex md:flex-col ml-4 md:ml-14">
+                        <h1 class="text-xl text-customBlueNavy md:leading-tight md:mb-8 md:text-51px md:text-customGreen4">Stay home & get your daily needs from our shop</h1>
+                        <p class="hidden md:block md:text-23px md:text-customGreen4">Start You'r Daily Sopping with Nest Mart</p>
+                    </div>
+                    <div class="hidden md:flex md:flex-col md:justify-end md:ml-5">
+                        <img class="min-w-211 min-h-187" src="../img&icon/garlic-img.svg" alt="garlic img">
+                        <img class="flex max-w-168 min-h-160 absolute" src="../img&icon/sweet-pepper-img(last main).svg" alt="sweet pepper img">
+                    </div>
+                    <div class="flex md:mr-8">
+                        <img class="hidden md:block md:absolute" src="../img&icon/tomato-Broccoli-img.svg" alt="tomato & broccoli img">
+                        <img class="flex max-w-56 min-h-40 md:max-w-418 md:min-h-360" src="../img&icon/men-last-main-img.svg" alt="men img">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="flex flex-col justify-between px-5 mt-10 md:flex-row">
+                    <div class="flex flex-col">
+                        <div class="flex">
+                            <img class="max-w-11 max-h-11 md:max-w-85 md:max-h-60" src="../img&icon/Logo.svg" alt="Logo icon">
+                            <div class="flex flex-col items-left pl-2">
+                                <p class="text-2xl flex flex-col justify-center md:text-5xl text-emerald-500">LOGO</p>
+                                <p class="text-fs6 md:text-11 text-blue-950">Mart & Grocery</p>
+                            </div>
+                        </div>
+                        <p class="text-base text-customBlueNavy py-5">Pellentesque posuere orci lobortis</p>
+                        <div class="flex flex-col gap-3">
+                            <div class="flex gap-2">
+                                <img class="max-w-4	max-h-4 filter-green mt-1" src="../img&icon/location-icon.svg" alt="location icon">
+                                <p class="font-bold text-base text-customBlueNavy max-w-330">Address: <span class="font-normal">5171 W Campbell Ave undefined Kent, Utah 53127 United States</span></p>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <img class="max-w-4	max-h-4 filter-green" src="../img&icon/headset.svg" alt="headset icon">
+                                <p class="font-bold text-base text-customBlueNavy">Call Us: <span class="font-normal">(+91) - 540-025-124553</span></p>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <img class="max-w-4	max-h-4 filter-green" src="../img&icon/subscribe.svg" alt="subscribe icon">
+                                <p class="font-bold text-base text-customBlueNavy">Email: <span class="font-normal">contact@nestmart.com</span></p>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <img class="max-w-4	max-h-4 filter-green" src="../img&icon/time-icon.svg" alt="time icon">
+                                <p class="font-bold text-base text-customBlueNavy">Hours: <span class="font-normal">10:00 - 18:00, Mon - Sat</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border border-customGrey1 mt-4 w-full md:m-0 md:hidden"></div>
+                    <div class="flex flex-col pt-2 pb-5 pl-5 md:p-0">
+                        <div class="flex items-center">
+                            <h3 class="hidden md:block md:text-customBlueNavy md:text-2xl">Company</h3>
+                            <button class="company-footer flex outline-none text-sm w-full md:hidden">Company<img class="company-arrow filter-gray md:hidden" src="../img&icon/arrow down.svg" alt="arrow down"></button>
+                        </div>
+                        <div class="company-details hidden md:flex md:flex-col mt-6 gap-2">
+                            <p class="text-customBlueNavy">About Us</p>
+                            <p class="text-customBlueNavy">Delivery Information</p>
+                            <p class="text-customBlueNavy">Privacy Policy</p>
+                            <p class="text-customBlueNavy">Terms & Conditions</p>
+                            <p class="text-customBlueNavy">Contact Us</p>
+                            <p class="text-customBlueNavy">Support Center</p>
+                            <p class="text-customBlueNavy">Careers</p>
+                        </div>
+                    </div>
+                    <div class="border border-customGrey1 mt-4 w-full md:m-0 md:hidden"></div>
+                    <div class="flex flex-col py-2 pl-5 md:p-0">
+                        <div class="flex items-center">
+                            <h3 class="hidden md:block md:text-customBlueNavy md:text-2xl">Information</h3>
+                            <button class="Information-footer flex outline-none text-sm w-full md:hidden">Information<img class="Information-arrow filter-gray md:hidden" src="../img&icon/arrow down.svg" alt="arrow down"></button>
+                        </div>
+                        <div class="Information-details hidden md:flex md:flex-col mt-6 gap-2">
+                            <p class="text-customBlueNavy">Search Terms</p>
+                            <p class="text-customBlueNavy">Advanced Search</p>
+                            <p class="text-customBlueNavy">Help & FAQ's</p>
+                            <p class="text-customBlueNavy">Store Location</p>
+                            <p class="text-customBlueNavy">Orders & Returns</p>
+                            <p class="text-customBlueNavy">Feedback for us</p>
+                        </div>
+                    </div>
+                    <div class="border border-customGrey1 mt-4 w-full md:m-0 md:hidden"></div>
+                    <div class="flex flex-col pt-5 md:p-0">
+                        <h3 class="text-base text-customBlueNavy md:text-2xl">App & Payment</h3>
+                        <p class="text-sm text-customGrey2 pb-5 mt-4 md:max-w-232 md:mt-6">Install NetMart App from App Store or Google Play</p>
+                        <div class="flex items-center justify-evenly pb-5 md:gap-5">
+                            <img class="max-w-32 max-h-38" src="../img&icon/appstore-img.svg" alt="appstore img">
+                            <img class="max-w-32 max-h-38" src="../img&icon/google play-img.svg" alt="google img">
+                        </div>
+                        <p class="text-sm text-customGrey2 pb-5">Secured Payment Gateways</p>
+                        <img class="max-h-8 w-full" src="../img&icon/payment-img.svg" alt="payment img">
+                    </div>
+                </div>
+                <div class="hidden md:flex md:justify-end mt-4">
+                    <button class="move-btn outline-none"><i class="border-2 border-customBlueNavy px-1.5 py-1 rounded-30 fa-solid fa-arrow-up"></i></button>
+                </div>
+                <div class="border border-customGrey1 mt-4 w-full md:m-0"></div>
+                <div class="flex justify-center divide-y-2 divide-solid divide-black my-4">
+                    <p>All rights reserved</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="../src/js/swiper.js"></script>
+    <script src="../src/js/food.js"></script>
+</body>
+</html>
